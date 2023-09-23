@@ -515,309 +515,320 @@
 						<!--begin::Row-->
 						<div class="row g-5 g-lg-10">
 							<div class="col-xl-6"></div>
-							<div class="card h-175px bgi-no-repeat bgi-size-contain mb-5 mb-lg-10" style="background-color: #1B283F; background-position: right;background-image:url('assets/media/svg/misc/taieri.svg')">
-													<!--begin::Body-->
-													<div class="card-body p-6">
-														<!--begin::Title-->
-														<a href="#" class="text-white text-hover-primary fw-bold fs-1" data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">Add Car</a>
-														<!--end::Title-->
-													</div>
-													<!--end::Body-->
-												</div>
-												</div>
-							<!--begin::Input group-->
-							<div class="col-xl-6">
-								<div class="card card-flush h-lg-100" id="kt_contacts_main">
-									<!--begin::Card body-->
-									<div class="card-body pt-5">
-										<!--begin::Form-->
-										<form id="newVehicleForm" class="form" action="#" method="post">
-											<!-- Entry Year -->
-											<div class="form-group mb-7">
-												<label for="entryYear" class="fs-6 fw-semibold mb-3">
-													<span>Entry Year</span>
-													<i class="fas fa-exclamation-circle ms-1 fs-7"
-														data-bs-toggle="tooltip" title="Enter the entry year."></i>
-												</label>
-												<input type="number" class="form-control form-control-solid"
-													id="entryYear" name="entryYear" required>
-											</div>
-
-											<!-- Manufacturer -->
-											<div class="form-group mb-7">
-												<label for="manufacturer" class="fs-6 fw-semibold mb-3">
-													<span>Manufacturer</span>
-													<i class="fas fa-exclamation-circle ms-1 fs-7"
-														data-bs-toggle="tooltip" title="Enter the manufacturer."></i>
-												</label>
-												<input type="text" class="form-control form-control-solid"
-													id="manufacturer" name="manufacturer" required>
-											</div>
-
-											<!-- Car Model Name -->
-											<div class="form-group mb-7">
-												<label for="modelName" class="fs-6 fw-semibold mb-3">
-													<span>Car Model Name</span>
-													<i class="fas fa-exclamation-circle ms-1 fs-7"
-														data-bs-toggle="tooltip" title="Enter the car model name."></i>
-												</label>
-												<input type="text" class="form-control form-control-solid"
-													id="modelName" name="modelName" required>
-											</div>
-
-											<!-- Sub Model -->
-											<div class="form-group mb-7">
-												<label for="subModel" class="fs-6 fw-semibold mb-3">
-													<span>Sub Model</span>
-												</label>
-												<input type="text" class="form-control form-control-solid" id="subModel"
-													name="subModel">
-											</div>
-
-											<!-- License No. -->
-											<div class="form-group mb-7">
-												<label for="licenseNo" class="fs-6 fw-semibold mb-3">
-													<span>License No.</span>
-													<i class="fas fa-exclamation-circle ms-1 fs-7"
-														data-bs-toggle="tooltip" title="Enter the license number."></i>
-												</label>
-												<input type="text" class="form-control form-control-solid"
-													id="licenseNo" name="licenseNo" required>
-											</div>
-
-											<!-- VIN (Vehicle Identification Number) -->
-											<div class="form-group mb-7">
-												<label for="vin" class="fs-6 fw-semibold mb-3">
-													<span>VIN (Vehicle Identification Number)</span>
-													<i class="fas fa-exclamation-circle ms-1 fs-7"
-														data-bs-toggle="tooltip" title="Enter the VIN number."></i>
-												</label>
-												<input type="text" class="form-control form-control-solid" id="vin"
-													name="vin" required>
-											</div>
-
-											<!-- Car Type (Dropdown List) -->
-											<div class="form-group mb-7">
-												<label for="carType" class="fs-6 fw-semibold mb-3">
-													<span>Car Type</span>
-												</label>
-												<select class="form-select form-select-solid" id="carType"
-													name="carType">
-													<option value="sedan">Sedan</option>
-													<option value="suv">SUV</option>
-													<option value="truck">Truck</option>
-													<option value="hatchback">Hatchback</option>
-													<!-- Add more options as needed -->
-												</select>
-											</div>
-
-
-											<!-- Unit Number -->
-											<div class="form-group mb-7">
-												<label for="unitNumber" class="fs-6 fw-semibold mb-3">
-													<span>Unit Number</span>
-												</label>
-												<input type="text" class="form-control form-control-solid"
-													id="unitNumber" name="unitNumber">
-											</div>
-
-
-
-											<!-- Choose Color (Dropdown List) -->
-											<div class="form-group mb-7">
-												<label for="color" class="fs-6 fw-semibold mb-3">
-													<span>Choose Color</span>
-												</label>
-												<select class="form-select form-select-solid" id="color" name="color">
-													<option value="red">Red</option>
-													<option value="blue">Blue</option>
-													<option value="black">Black</option>
-													<option value="white">White</option>
-													<!-- Add more color options as needed -->
-												</select>
-											</div>
-
-											<!-- Engine Size -->
-											<div class="form-group mb-7">
-												<label for="engineSize" class="fs-6 fw-semibold mb-3">
-													<span>Engine Size (cc)</span>
-												</label>
-												<input type="number" class="form-control form-control-solid"
-													id="engineSize" name="engineSize">
-											</div>
-
-											<!-- Drive Train (Dropdown List) -->
-											<div class="form-group mb-7">
-												<label for="driveTrain" class="fs-6 fw-semibold mb-3">
-													<span>Drive Train</span>
-												</label>
-												<select class="form-select form-select-solid" id="driveTrain"
-													name="driveTrain">
-													<option value="front-wheel-drive">Front-Wheel Drive</option>
-													<option value="rear-wheel-drive">Rear-Wheel Drive</option>
-													<option value="all-wheel-drive">All-Wheel Drive</option>
-													<!-- Add more drive train options as needed -->
-												</select>
-											</div>
-
-											<!-- Select Transmission -->
-											<div class="form-group mb-7">
-												<label for="transmission" class="fs-6 fw-semibold mb-3">
-													<span>Select Transmission</span>
-												</label>
-												<select class="form-select form-select-solid" id="transmission"
-													name="transmission">
-													<option value="automatic">Automatic</option>
-													<option value="manual">Manual</option>
-												</select>
-											</div>
-
-											<!-- Tire Pressure (Dropdown List) -->
-											<div class="form-group mb-7">
-												<label for="tirePressure" class="fs-6 fw-semibold mb-3">
-													<span>Tire Pressure (PSI)</span>
-												</label>
-												<select class="form-select form-select-solid" id="tirePressure"
-													name="tirePressure">
-													<option value="30">30 PSI</option>
-													<option value="32">32 PSI</option>
-													<option value="34">34 PSI</option>
-													<option value="36">36 PSI</option>
-													<!-- Add more tire pressure options as needed -->
-												</select>
-											</div>
-
-											<!-- Production Date -->
-											<div class="form-group mb-7">
-												<label for="productionDate" class="fs-6 fw-semibold mb-3">
-													<span>Production Date</span>
-												</label>
-												<input type="date" class="form-control form-control-solid"
-													id="productionDate" name="productionDate">
-											</div>
-
-											<!-- Add your notes here (Textarea) -->
-											<div class="form-group mb-7">
-												<label for="notes" class="fs-6 fw-semibold mb-3">
-													<span>Notes</span>
-													<i class="fas fa-exclamation-circle ms-1 fs-7"
-														data-bs-toggle="tooltip"
-														title="Enter any additional notes (optional)."></i>
-												</label>
-												<textarea class="form-control form-control-solid" id="notes"
-													name="notes" rows="4"></textarea>
-											</div>
-
-											<!-- Submit Button -->
-											<div class="d-flex justify-content-end">
-												<button type="reset" data-kt-contacts-type="cancel"
-													class="btn btn-light me-3">Cancel</button>
-												<button type="submit" data-kt-contacts-type="submit"
-													class="btn btn-primary">
-													<span class="indicator-label">Add New Vehicle</span>
-													<span class="indicator-progress">Please wait...
-														<span
-															class="spinner-border spinner-border-sm align-middle ms-2"></span>
-													</span>
-												</button>
-											</div>
-										</form>
-
-										<!--end::Form-->
-									</div>
-									<!--end::Card body-->
+							<div class="card h-175px bgi-no-repeat bgi-size-contain mb-5 mb-lg-10"
+								style="background-color: #1B283F; background-position: right;background-image:url('assets/media/svg/misc/taieri.svg')">
+								<!--begin::Body-->
+								<div class="card-body p-6">
+									<!--begin::Title-->
+									<a href="#" class="text-white text-hover-primary fw-bold fs-1"
+										data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">Add Car</a>
+									<!--end::Title-->
 								</div>
+								<!--end::Body-->
 							</div>
-							<!--end::Row-->
-
-
-							<!--begin::Row-->
-							<div class="row g-10 g-lg-10">
-								<!--begin::Footer-->
-
-								<div class="footer py-4 d-flex flex-column flex-md-row flex-md-wrap justify-content-between align-items-center"
-									id="kt_footer">
-									<!--begin::Copyright-->
-									<div class="text-dark order-2 order-md-1 mb-2 mb-md-0">
-										<span class="text-muted fw-semibold me-1"><span id="year"></span> &copy;</span>
-										<a href="https://nisargpatel.in" target="_blank"
-											class="text-gray-800 text-hover-primary">SwiftFix Garage System
-											Developers</a>
-									</div>
-									<!--end::Copyright-->
-									<!--begin::Menu-->
-									<ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1 mb-2 mb-md-0">
-										<li class="menu-item">
-											<a href="#" target="_blank" class="menu-link px-2">About</a>
-										</li>
-										<li class="menu-item">
-											<a href="#" target="_blank" class="menu-link px-2">Support</a>
-										</li>
-										<li class="menu-item">
-											<a href="#" target="_blank" class="menu-link px-2">Purchase</a>
-										</li>
-									</ul>
-									<!--end::Menu-->
-								</div>
-
-								<!--end::Footer-->
-							</div>
-							<!--end::Row-->
 						</div>
+						<!--begin::Input group-->
+						<div class="col-xl-6">
+							<div class="card card-flush h-lg-100" id="kt_contacts_main">
+								<!--begin::Card body-->
+								<div class="card-body pt-5">
+									<!--begin::Form-->
+									<form id="newVehicleForm" class="form" action="#" method="post">
+										<!-- Entry Year -->
+										<div class="form-group mb-7">
+											<label for="entryYear" class="fs-6 fw-semibold mb-3">
+												<span>Entry Year</span>
+												<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip"
+													title="Enter the entry year."></i>
+											</label>
+											<input type="number" class="form-control form-control-solid" id="entryYear"
+												name="entryYear" required>
+										</div>
+
+										<!-- Manufacturer Dropdown -->
+										<div class="form-group mb-7">
+											<label for="manufacturer" class="fs-6 fw-semibold mb-3">
+												<span>Manufacturer</span>
+											</label>
+											<select class="form-select form-select-solid" id="manufacturer"
+												name="manufacturer" required>
+												<option value="toyota">Toyota</option>
+												<option value="honda">Honda</option>
+												<!-- Add more manufacturer options as needed -->
+											</select>
+										</div>
+
+										<!-- Car Model Name Dropdown (Initially Hidden) -->
+										<div class="form-group mb-7" id="carModelGroup" style="display: none;">
+											<label for="modelName" class="fs-6 fw-semibold mb-3">
+												<span>Car Model Name</span>
+											</label>
+											<select class="form-select form-select-solid" id="modelName"
+												name="modelName" required>
+												<!-- Car model options will be dynamically added here based on the selected manufacturer -->
+											</select>
+										</div>
+
+
+										<!-- Sub Model -->
+										<div class="form-group mb-7">
+											<label for="subModel" class="fs-6 fw-semibold mb-3">
+												<span>Sub Model</span>
+											</label>
+											<input type="text" class="form-control form-control-solid" id="subModel"
+												name="subModel">
+										</div>
+
+										<!-- License No. -->
+										<div class="form-group mb-7">
+											<label for="licenseNo" class="fs-6 fw-semibold mb-3">
+												<span>License No.</span>
+												<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip"
+													title="Enter the license number."></i>
+											</label>
+											<input type="text" class="form-control form-control-solid" id="licenseNo"
+												name="licenseNo" required>
+										</div>
+
+										<!-- VIN (Vehicle Identification Number) -->
+										<div class="form-group mb-7">
+											<label for="vin" class="fs-6 fw-semibold mb-3">
+												<span>VIN (Vehicle Identification Number)</span>
+												<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip"
+													title="Enter the VIN number."></i>
+											</label>
+											<input type="text" class="form-control form-control-solid" id="vin"
+												name="vin" required>
+										</div>
+
+										<!-- Car Type (Dropdown List) -->
+										<div class="form-group mb-7">
+											<label for="carType" class="fs-6 fw-semibold mb-3">
+												<span>Car Type</span>
+											</label>
+											<select class="form-select form-select-solid" id="carType" name="carType">
+												<option value="sedan">Sedan</option>
+												<option value="suv">SUV</option>
+												<option value="truck">Truck</option>
+												<option value="hatchback">Hatchback</option>
+												<!-- Add more options as needed -->
+											</select>
+										</div>
+
+
+										<!-- Unit Number -->
+										<div class="form-group mb-7">
+											<label for="unitNumber" class="fs-6 fw-semibold mb-3">
+												<span>Unit Number</span>
+											</label>
+											<input type="text" class="form-control form-control-solid" id="unitNumber"
+												name="unitNumber">
+										</div>
+
+
+
+										<!-- Choose Color (Dropdown List) -->
+										<div class="form-group mb-7">
+											<label for="color" class="fs-6 fw-semibold mb-3">
+												<span>Choose Color</span>
+											</label>
+											<select class="form-select form-select-solid" id="color" name="color">
+												<option value="red">Red</option>
+												<option value="blue">Blue</option>
+												<option value="black">Black</option>
+												<option value="white">White</option>
+												<!-- Add more color options as needed -->
+											</select>
+										</div>
+
+										<!-- Engine Size -->
+										<div class="form-group mb-7">
+											<label for="engineSize" class="fs-6 fw-semibold mb-3">
+												<span>Engine Size (cc)</span>
+											</label>
+											<input type="number" class="form-control form-control-solid" id="engineSize"
+												name="engineSize">
+										</div>
+
+										<!-- Drive Train (Dropdown List) -->
+										<div class="form-group mb-7">
+											<label for="driveTrain" class="fs-6 fw-semibold mb-3">
+												<span>Drive Train</span>
+											</label>
+											<select class="form-select form-select-solid" id="driveTrain"
+												name="driveTrain">
+												<option value="front-wheel-drive">Front-Wheel Drive</option>
+												<option value="rear-wheel-drive">Rear-Wheel Drive</option>
+												<option value="all-wheel-drive">All-Wheel Drive</option>
+												<!-- Add more drive train options as needed -->
+											</select>
+										</div>
+
+										<!-- Select Transmission -->
+										<div class="form-group mb-7">
+											<label for="transmission" class="fs-6 fw-semibold mb-3">
+												<span>Select Transmission</span>
+											</label>
+											<select class="form-select form-select-solid" id="transmission"
+												name="transmission">
+												<option value="automatic">Automatic</option>
+												<option value="manual">Manual</option>
+											</select>
+										</div>
+
+										<!-- Tire Pressure (Dropdown List) -->
+										<div class="form-group mb-7">
+											<label for="tirePressure" class="fs-6 fw-semibold mb-3">
+												<span>Tire Pressure (PSI)</span>
+											</label>
+											<select class="form-select form-select-solid" id="tirePressure"
+												name="tirePressure">
+												<option value="30">30 PSI</option>
+												<option value="32">32 PSI</option>
+												<option value="34">34 PSI</option>
+												<option value="36">36 PSI</option>
+												<!-- Add more tire pressure options as needed -->
+											</select>
+										</div>
+
+										<!-- Production Date -->
+										<div class="form-group mb-7">
+											<label for="productionDate" class="fs-6 fw-semibold mb-3">
+												<span>Production Date</span>
+											</label>
+											<input type="date" class="form-control form-control-solid"
+												id="productionDate" name="productionDate">
+										</div>
+
+										<!-- Add your notes here (Textarea) -->
+										<div class="form-group mb-7">
+											<label for="notes" class="fs-6 fw-semibold mb-3">
+												<span>Notes</span>
+												<i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip"
+													title="Enter any additional notes (optional)."></i>
+											</label>
+											<textarea class="form-control form-control-solid" id="notes" name="notes"
+												rows="4"></textarea>
+										</div>
+
+										<!-- Submit Button -->
+										<div class="d-flex justify-content-end">
+											<button type="reset" data-kt-contacts-type="cancel"
+												class="btn btn-light me-3">Cancel</button>
+											<button type="submit" data-kt-contacts-type="submit"
+												class="btn btn-primary">
+												<span class="indicator-label">Add New Vehicle</span>
+												<span class="indicator-progress">Please wait...
+													<span
+														class="spinner-border spinner-border-sm align-middle ms-2"></span>
+												</span>
+											</button>
+										</div>
+									</form>
+
+									<!--end::Form-->
+								</div>
+								<!--end::Card body-->
+							</div>
+						</div>
+						<!--end::Row-->
+
+
+						<!--begin::Row-->
+						<div class="row g-10 g-lg-10">
+							<!--begin::Footer-->
+
+							<div class="footer py-4 d-flex flex-column flex-md-row flex-md-wrap justify-content-between align-items-center"
+								id="kt_footer">
+								<!--begin::Copyright-->
+								<div class="text-dark order-2 order-md-1 mb-2 mb-md-0">
+									<span class="text-muted fw-semibold me-1"><span id="year"></span> &copy;</span>
+									<a href="https://nisargpatel.in" target="_blank"
+										class="text-gray-800 text-hover-primary">SwiftFix Garage System
+										Developers</a>
+								</div>
+								<!--end::Copyright-->
+								<!--begin::Menu-->
+								<ul class="menu menu-gray-600 menu-hover-primary fw-semibold order-1 mb-2 mb-md-0">
+									<li class="menu-item">
+										<a href="#" target="_blank" class="menu-link px-2">About</a>
+									</li>
+									<li class="menu-item">
+										<a href="#" target="_blank" class="menu-link px-2">Support</a>
+									</li>
+									<li class="menu-item">
+										<a href="#" target="_blank" class="menu-link px-2">Purchase</a>
+									</li>
+								</ul>
+								<!--end::Menu-->
+							</div>
+
+							<!--end::Footer-->
+						</div>
+						<!--end::Row-->
 					</div>
-
-
-
-
-
 				</div>
-				<!--end::Post-->
-				<!--begin::Footer-->
-				<!--	previously footer was here  -->
 
-				<!--end::Footer-->
+
+
+
+
 			</div>
+			<!--end::Post-->
+			<!--begin::Footer-->
+			<!--	previously footer was here  -->
 
-			<!--end::Content wrapper-->
+			<!--end::Footer-->
 		</div>
 
+		<!--end::Content wrapper-->
+	</div>
 
 
 
-		<!--end::Modal - Create App-->
-		<!--begin::Modal - Create Campaign-->
 
-		<!--begin::Javascript-->
-		<script>var hostUrl = "assets/";
-			document.getElementById("year").innerHTML = new Date().getFullYear();</script>
-		<!--begin::Global Javascript Bundle(used by all pages)-->
-		<script src="assets/plugins/global/plugins.bundle.js"></script>
-		<script src="assets/js/scripts.bundle.js"></script>
-		<!--end::Global Javascript Bundle-->
-		<!--begin::Vendors Javascript(used by this page)-->
-		<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
-		<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
-		<!--end::Vendors Javascript-->
-		<!--begin::Custom Javascript(used by this page)-->
-		<script src="assets/js/widgets.bundle.js"></script>
-		<script src="assets/js/custom/widgets.js"></script>
-		<script src="assets/js/custom/apps/chat/chat.js"></script>
-		<script src="assets/js/custom/utilities/modals/create-app.js"></script>
-		<script src="assets/js/custom/utilities/modals/create-campaign.js"></script>
-		<script src="assets/js/custom/utilities/modals/users-search.js"></script>
-		<!--end::Custom Javascript-->
-		<!--end::Javascript-->
+	<!--end::Modal - Create App-->
+	<!--begin::Modal - Create Campaign-->
+
+	<!--begin::Javascript-->
+	<script>var hostUrl = "assets/";
+		document.getElementById("year").innerHTML = new Date().getFullYear();
+
+
+
+	</script>
+
+	<script src="assets/js/custom/nisarg/car.model.selector/add.car.scripts.js"></script>
+
+	<!--begin::Global Javascript Bundle(used by all pages)-->
+	<script src="assets/plugins/global/plugins.bundle.js"></script>
+	<script src="assets/js/scripts.bundle.js"></script>
+	<!--end::Global Javascript Bundle-->
+	<!--begin::Vendors Javascript(used by this page)-->
+	<script src="assets/plugins/custom/fullcalendar/fullcalendar.bundle.js"></script>
+	<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+	<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+	<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+	<script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
+	<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+	<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
+	<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
+	<script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
+	<script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
+	<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
+	<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
+	<script src="assets/plugins/custom/datatables/datatables.bundle.js"></script>
+	<!--end::Vendors Javascript-->
+	<!--begin::Custom Javascript(used by this page)-->
+	<script src="assets/js/widgets.bundle.js"></script>
+	<script src="assets/js/custom/widgets.js"></script>
+	<script src="assets/js/custom/apps/chat/chat.js"></script>
+	<script src="assets/js/custom/utilities/modals/create-app.js"></script>
+	<script src="assets/js/custom/utilities/modals/create-campaign.js"></script>
+	<script src="assets/js/custom/utilities/modals/users-search.js"></script>
+	<!-- Custom Scripts Nisarg-->
+	<!--end::Custom Javascript-->
+	<!--end::Javascript-->
 </body>
 <!--end::Body-->
 
