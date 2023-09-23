@@ -1,0 +1,44 @@
+<html>
+<body>
+
+	<div class="form-group mb-7">
+		<label for="carType" class="fs-6 fw-semibold mb-3">
+			<span>Car Type</span>
+		</label>
+		<select class="form-select form-select-solid" id="main_menu" name="carType">
+			<option value="sedan">Sedan</option>
+			<option value="SUV">SUV</option> <!-- Corrected the case here -->
+			<option value="Hachback">Hatchback</option>
+			<!-- Corrected the case here -->
+			<!-- Add more options as needed -->
+		</select>
+		<select id="sub_menu" class="form-select form-select-solid mt-3">
+	
+		</select>
+	</div>
+</body>
+</html>
+
+<script>var cars = {
+		sedan: ['Honda City', 'Hyundai Verna', 'Suzuki Dzire', 'BMW M3', 'Mercedes C class'],
+		SUV: ['Mahindra Thar', 'Scorpio N', 'Toyota Fortuner', 'Lamborghini Urus', 'Ferrari Purosagne'],
+		Hachback: ['Honda Brv', 'Suzuki I10', 'Suzuki I20', 'Suzuki Baleno', 'Suzuki Ritz']
+	}
+
+	var main = document.getElementById('main_menu');
+	var sub = document.getElementById('sub_menu');
+
+	main.addEventListener('change', function () {
+		var selected_option = cars[this.value];
+
+		while (sub.options.length > 0) {
+			sub.options.remove(0);
+		}
+
+		for (var i = 0; i < selected_option.length; i++) {
+			var option = new Option(selected_option[i], selected_option[i]);
+			sub.appendChild(option);
+		}
+	});</script>
+
+<!-- Car Type (Dropdown List) -->
