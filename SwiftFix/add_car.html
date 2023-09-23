@@ -554,8 +554,8 @@
 											</label>
 											<select class="form-control form-control-solid select2" id="manufacturer"
 												name="manufacturer" required>
-												
-												<!-- Add more manufacturer options as needed -->
+												<option value="" disabled>Select a manufacturer</option>
+												<!-- Options will be populated dynamically using JavaScript -->
 											</select>
 										</div>
 
@@ -566,12 +566,10 @@
 											</label>
 											<select class="form-control form-control-solid select2" id="modelName"
 												name="modelName" required>
+												<option value="" disabled>Select a car model</option>
 												<!-- Car model options will be dynamically added here based on the selected manufacturer -->
 											</select>
 										</div>
-
-
-
 
 										<!-- Sub Model -->
 										<div class="form-group mb-7">
@@ -618,7 +616,6 @@
 											</select>
 										</div>
 
-
 										<!-- Unit Number -->
 										<div class="form-group mb-7">
 											<label for="unitNumber" class="fs-6 fw-semibold mb-3">
@@ -627,8 +624,6 @@
 											<input type="text" class="form-control form-control-solid" id="unitNumber"
 												name="unitNumber">
 										</div>
-
-
 
 										<!-- Choose Color (Dropdown List) -->
 										<div class="form-group mb-7">
@@ -729,6 +724,7 @@
 										</div>
 									</form>
 
+
 									<!--end::Form-->
 								</div>
 								<!--end::Card body-->
@@ -803,7 +799,7 @@
 
 	<script src="assets/js/custom/nisarg/car.model.selector/add.car.scripts.js"></script>
 	<!-- Include Choices.js CSS and JS files -->
-	
+
 	<!--script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></!--script-->
 	<!--begin::Global Javascript Bundle(used by all pages)-->
 	<script src="assets/plugins/global/plugins.bundle.js"></script>

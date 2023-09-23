@@ -97,83 +97,76 @@ const carModelsData = {
     "Rolls-Royce": ["Phantom", "Cullinan", "Ghost", "Wraith", "Dawn"],
     Bugatti: ["Chiron", "Veyron"],
 };
-// Get the select elements as variables
-const manufacturerSelect = document.getElementById("manufacturer");
-const carModelSelect = document.getElementById("modelName");
-const carModelGroup = document.getElementById("carModelGroup");
-
-// Function to populate the Manufacturer dropdown
-function populateManufacturers() {
-    // Clear existing options
-    manufacturerSelect.innerHTML = "";
-
-    // Add a default option
-    const defaultOption = document.createElement("option");
-    defaultOption.value = "";
-    defaultOption.textContent = "Select a manufacturer";
-    manufacturerSelect.appendChild(defaultOption);
-
-    // Populate the dropdown with options from globalCarManufacturers
-    globalCarManufacturers.forEach((manufacturer) => {
-        const option = document.createElement("option");
-        option.value = manufacturer;
-        option.textContent = manufacturer;
-        manufacturerSelect.appendChild(option);
+document.addEventListener("DOMContentLoaded", function () {
+    // Initialize tooltips
+    const tooltips = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+    tooltips.forEach((tooltip) => {
+        new bootstrap.Tooltip(tooltip);
     });
 
-    // Initialize Choices.js for the Manufacturer dropdown without search
-    if (manufacturerSelect.choices) {
-        manufacturerSelect.choices.destroy();
-    }
-    new Choices(manufacturerSelect, { searchEnabled: false }); // Disable search
-}
+    // Populate the Manufacturer dropdown
+    const manufacturerSelect = document.getElementById("manufacturer");
+    const carModelSelect = document.getElementById("modelName");
+    const carModelGroup = document.getElementById("carModelGroup");
 
-// Event listener for the form element (listen for changes in any form element)
-const form = document.querySelector("form");
-form.addEventListener("change", function (event) {
-    if (event.target.id === "manufacturer") {
-        // Manufacturer dropdown changed, update the car models
-        populateCarModels();
-    }
-});
+    // Function to populate the Manufacturer dropdown
+    function populateManufacturers() {
+        // Clear existing options
+        manufacturerSelect.innerHTML = "";
 
-// Function to populate the Car Model dropdown based on selected manufacturer
-function populateCarModels() {
-    const selectedManufacturer = manufacturerSelect.value;
+        // Add a default option
+        const defaultOption = document.createElement("option");
+        defaultOption.value = "";
+        defaultOption.textContent = "Select a manufacturer";
+        manufacturerSelect.appendChild(defaultOption);
 
-    // Clear existing options
-    carModelSelect.innerHTML = "";
-
-    // Add a default option
-    const defaultOption = document.createElement("option");
-    defaultOption.value = "";
-    defaultOption.textContent = "Select a car model";
-    carModelSelect.appendChild(defaultOption);
-
-    // Populate with options based on selected manufacturer
-    if (carModelsData[selectedManufacturer]) {
-        carModelsData[selectedManufacturer].forEach((model) => {
+        // Populate the dropdown with options from globalCarManufacturers
+        globalCarManufacturers.forEach((manufacturer) => {
             const option = document.createElement("option");
-            option.value = model;
-            option.textContent = model;
-            carModelSelect.appendChild(option);
+            option.value = manufacturer;
+            option.textContent = manufacturer;
+            manufacturerSelect.appendChild(option);
         });
-        // Show the Car Model dropdown
-        carModelGroup.style.display = "block";
-    } else {
-        // Hide the Car Model dropdown and show a message
-        carModelGroup.style.display = "none";
     }
 
-    // Initialize Choices.js for the Car Model dropdown without search
-    if (carModelSelect.choices) {
-        carModelSelect.choices.destroy();
+    // Event listener for the form element (listen for changes in any form element)
+    const form = document.querySelector("form");
+    form.addEventListener("change", function (event) {
+        if (event.target.id === "manufacturer") {
+            // Manufacturer dropdown changed, update the car models
+            populateCarModels();
+        }
+    });
+
+    // Function to populate the Car Model dropdown based on selected manufacturer
+    function populateCarModels() {
+        const selectedManufacturer = manufacturerSelect.value;
+
+        // Clear existing options
+        carModelSelect.innerHTML = "";
+
+        // Add a default option
+        const defaultOption = document.createElement("option");
+        defaultOption.value = "";
+        defaultOption.textContent = "Select a car model";
+        carModelSelect.appendChild(defaultOption);
+
+        // Populate with options based on selected manufacturer
+        if (carModelsData[selectedManufacturer]) {
+            carModelsData[selectedManufacturer].forEach((model) => {
+                const option = document.createElement("option");
+                option.value = model;
+                option.textContent = model;
+                carModelSelect.appendChild(option);
+            });
+            // Show the Car Model dropdown
+            carModelGroup.style.display = "block";
+        } else {
+            // Hide the Car Model dropdown and show a message
+            carModelGroup.style.display = "none";
+        }
     }
-    new Choices(carModelSelect, { searchEnabled: false }); // Disable search
-}
 
-// Initial population of the Manufacturer dropdown when the page loads
-populateManufacturers();
-
-// Initial population of the Car Model dropdown when the page loads
-populateCarModels();
+    // Initial population of the Manufacturer dropdown when the page loads
+    populateManufacturers();
+});
