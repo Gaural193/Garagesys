@@ -10,7 +10,8 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta property="og:locale" content="en_US" />
-
+	<!-- For search option menu for choosing car model -->
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"> -->
 	<!--begin::Fonts-->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
 	<!--end::Fonts-->
@@ -22,6 +23,7 @@
 	<link href="assets/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
 	<link href="assets/css/style.bundle.css" rel="stylesheet" type="text/css" />
 	<!--end::Global Stylesheets Bundle-->
+	<style></style>
 </head>
 <!--end::Head-->
 <!--begin::Body-->
@@ -545,29 +547,30 @@
 												name="entryYear" required>
 										</div>
 
-										<!-- Manufacturer Dropdown -->
+										<!-- Manufacturer Search/Select2 -->
 										<div class="form-group mb-7">
 											<label for="manufacturer" class="fs-6 fw-semibold mb-3">
 												<span>Manufacturer</span>
 											</label>
-											<select class="form-select form-select-solid" id="manufacturer"
+											<select class="form-control form-control-solid select2" id="manufacturer"
 												name="manufacturer" required>
-												<option value="toyota">Toyota</option>
-												<option value="honda">Honda</option>
+												
 												<!-- Add more manufacturer options as needed -->
 											</select>
 										</div>
 
-										<!-- Car Model Name Dropdown (Initially Hidden) -->
+										<!-- Car Model Name Search/Select2 (Initially Hidden) -->
 										<div class="form-group mb-7" id="carModelGroup" style="display: none;">
 											<label for="modelName" class="fs-6 fw-semibold mb-3">
 												<span>Car Model Name</span>
 											</label>
-											<select class="form-select form-select-solid" id="modelName"
+											<select class="form-control form-control-solid select2" id="modelName"
 												name="modelName" required>
 												<!-- Car model options will be dynamically added here based on the selected manufacturer -->
 											</select>
 										</div>
+
+
 
 
 										<!-- Sub Model -->
@@ -799,7 +802,9 @@
 	</script>
 
 	<script src="assets/js/custom/nisarg/car.model.selector/add.car.scripts.js"></script>
-
+	<!-- Include Choices.js CSS and JS files -->
+	
+	<!--script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></!--script-->
 	<!--begin::Global Javascript Bundle(used by all pages)-->
 	<script src="assets/plugins/global/plugins.bundle.js"></script>
 	<script src="assets/js/scripts.bundle.js"></script>
